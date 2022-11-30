@@ -13,15 +13,13 @@ const openDoorFirst = (day, event) => {
 const openDoorSecond = (day, event) => {
     if (day <= currentDay) {
             event.target.parentNode.style.backgroundImage = `url(./images/tuer${day}.png)`;
+            event.target.addEventListener("click", openDoorThird.bind(null, day), { once: true });
         }
-        event.target.addEventListener("click", openDoorThird.bind(null, day), { once: true });
 }
 
 const openDoorThird = (day, event) => {
     event.target.style.opacity = "0";
-    if (day <= currentDay) {
-        event.target.addEventListener("click", openDoorFourth.bind(null, day), { once: true });
-    }
+    event.target.addEventListener("click", openDoorFourth.bind(null, day), { once: true });
     sumOfDays = sumOfDays + day;
     if (sumOfDays == 300) { // Summe von 1 bis 24
         calendarContainer.style.backgroundImage = `url(./images/calendar24.png)`;
