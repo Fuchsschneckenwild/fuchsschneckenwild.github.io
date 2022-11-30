@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "PressStart2P";
+    src: url("./font/PressStart2P.ttf");
+}
+
+@font-face {
+  font-family: "StardewValley";
+  src: url("./font/StardewValley.ttf");
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: #000000;
+    max-width: 828px;
+    max-height: 1792px;
+  }
+
+  .container {
+      padding-top: 156px;
+      padding-right: 12px;
+      padding-left: 12px;
+      padding-bottom: 76px;
+      width: 810px;
+      height: 1536px;
+      background-image: url("./images/calendar00.png");
+      background-size: cover;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      grid-gap: 10px;
+      grid-template-areas:
+        "door13 door20 door8 door10"
+        "door9 door11 door19 door3"
+        "door23 door18 door22 door7"
+        "door15 door24 door12 door5"
+        "door6 door21 door2 door17"
+        "door14 door16 door4 door1";
+  }
+  
+  .image {
+      background-image: none;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  
+  .text {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      padding: 18px;
+      color: yellow;
+      font-family: "PressStart2P";
+      font-size: 24px;
+      text-align: right;
+      transition: opacity 1.5s;
+      border: 2px solid black;
+      /*box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);*/
+      text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  }
