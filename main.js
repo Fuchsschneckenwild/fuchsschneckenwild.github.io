@@ -19,7 +19,9 @@ const openDoorSecond = (day, event) => {
 
 const openDoorThird = (day, event) => {
     event.target.style.opacity = "0";
-    event.target.addEventListener("click", openDoorFourth.bind(null, day), { once: true });
+    if (day != 24) {
+        event.target.addEventListener("click", openDoorFourth.bind(null, day), { once: true });
+    }
     sumOfDays = sumOfDays + day;
     if (sumOfDays == 300) { // Summe von 1 bis 24
         calendarContainer.style.backgroundImage = `url(./images/calendar24.png)`;
