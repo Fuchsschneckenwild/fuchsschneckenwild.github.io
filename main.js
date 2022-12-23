@@ -2,9 +2,10 @@ const calendarContainer = document.querySelector(".container");
 const audioJukebox = document.getElementById("jukebox");
 const audioXmas = document.getElementById("xmas");
 
-const currentDate = new Date();
-const currentDay = currentDate.getDate();
+//const currentDate = new Date();
+//const currentDay = currentDate.getDate();
 var sumOfDays = 0;
+const currentDay = 24;
 
 const openDoorFirst = (day, event) => {
     event.target.style.opacity = "1";
